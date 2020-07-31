@@ -5,7 +5,7 @@ class Popular extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      movies: [ ]
+      movies: {results: []}
       
     };
   }
@@ -24,9 +24,9 @@ class Popular extends React.Component {
   render() {
     console.log(this.state.movies);
       return (
-        <div>
+        <div className='container'>
           <ul>
-            {this.state.movies.results.map(result => (
+            {this.state.movies.results.map((result, key) => (
             <li key = {result.id}>{result.title}
             </li>))}
           </ul>
